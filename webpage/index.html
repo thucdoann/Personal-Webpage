@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Claire's Personal Webpage</title>
+
+        <!--custom CSS link-->
+        <link href="styles.css" rel="stylesheet" type="text/css">
+
+        <!--boxicon link-->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rammetto+One&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rammetto+One&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
+        <!--custom js link-->
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!--deskstop navigation-->
+        <nav class="header" id="header">
+            <a href="#" class="logo">Claire Le</a>
+            <ul class ="navlist">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="bx bx-menu" id="menu-icon"></div>  
+        </nav>
+    
+    <section class="title">
+        <div class="main-text">
+            <h1>WELCOME TO <br> MY SPACE</h1>
+            <p>Hi there! I’m a recent Media and Communication graduate from Erasmus University, <br>
+                specializing in Branding and Corporate Communication. Currently, I’m expanding <br>
+                my skills in Web Design and Coding. Excited to join me on this journey?</p>
+            <a href="#">Download CV</a>
+            <a href="#" class="contact">Contact Info</a>
+        </div>
+    </section>
+
+    <div class="main">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+        <div class="bg-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+    </body>
+</html>
