@@ -10,6 +10,7 @@
 :root {
     --color-bg1: rgb(216, 109, 119); 
     --color-bg2: rgb(8, 17, 82);
+    --color-bg2no: 8, 17, 82;
     --color1: 108, 0, 162;
     --color1rgb: rgb(108, 0, 162);
     --color2: 249, 149, 83;
@@ -21,7 +22,7 @@
     --color5: 42, 118, 231;
     --color5rgb: rgb(42, 118, 231);
     --color-interactive: 147, 115, 239;
-    --color-interactivergb: rgb(147, 115, 239);
+    --color-interactivergb: rgb(182, 158, 255);
     --circle-size: 80%; 
     --blending: hard-light; 
 }
@@ -36,7 +37,7 @@ nav {
     top: 0; 
     width: 100%;
     display: flex;
-    z-index: 1000; 
+    z-index: 30000; 
     align-items: center;
     justify-content: space-between;   
     padding: 30px 9%;
@@ -65,8 +66,8 @@ nav {
 }
 
 .navlist a:hover{
-    border-bottom: 2px solid grey;
-
+    color: var(--color-bg2); 
+    font-weight: bold;
 }
 
 #menu-icon{
@@ -75,7 +76,6 @@ nav {
     z-index: 100001; 
     cursor: pointer;
     display: none;
-    position: relative;   
 }
 
 .main {
@@ -243,33 +243,39 @@ section {
     margin-left: 20px;  
 }
 
-@media (max-width: 990px) {
+@media (max-width: 900px) {
     #menu-icon{
         display: block; 
     }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        background: rgba(var(--color-bg2no), 0.9);
+        width: 80%;
+        height: 100%;
+        padding: 8rem 3.5rem 3.5rem;
+        transition: right .6s ease; 
+        z-index: 20000; 
+        display: flex;
+        justify-content: flex-start; 
+    }
     .navlist {
         display: flex;
-        position: absolute;
-        z-index: 20000;  
-        right: -100%;
-        top: 80%;
-        width: 250px;
-        height: 30vh;
-        background: lightslategray;
-        align-items: center;
-        flex-direction: column;
-        transition: all .55s ease;
-        padding: 20px 30px;   
-        box-sizing: border-box; 
-        justify-content: space-between; 
+        flex-direction: column; 
+        row-gap: 3rem;  
     }
     .navlist a{
-        display: block; 
-        margin: 10px 0;
-        text-align: center;  
+        text-align: center;
+        font-size: 20px;
+        font-family: "Dela Gothic One", sans-serif;   
     }
 
-    .navlist.open {
+    .navlist a:hover{
+        color: var(--color-interactivergb); 
+    }
+
+    .nav-menu.open {
         right: 0; 
     }
 }
